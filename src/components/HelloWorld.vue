@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import { post } from '@/utils/request'
+import { get } from '@/utils/request'
 export default{
 
 methods:{
 
 
   longin(){
-    post('/say',{}).then(res=>{
+    get('/api/mes/say',{}).then(res=>{
        console.info(res)
     })
   } 

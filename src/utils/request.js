@@ -11,11 +11,11 @@ import axios from 'axios'
 //     })    
 // })
 // }
-const brasUrl = 'http://localhost:10003'
+const brasUrl = 'http://localhost:10004'
 
- function post(url, params) {
+ function get(url, params) {
   return new Promise((resolve, reject) => {
-       axios.post(brasUrl+url, JSON.stringify(params))
+       axios.get(brasUrl+url)
       .then(res => {
           resolve(res.data);
       })
@@ -26,4 +26,4 @@ const brasUrl = 'http://localhost:10003'
 }
 
 
-export {post  }
+export {get  }
